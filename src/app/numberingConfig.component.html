@@ -1,0 +1,31 @@
+<div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+    @for (element of elements; track element) {
+  <div cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    <div>
+      <label>{{element.type}} Prefix:</label>
+      <input [(ngModel)]="element.prefix">
+    </div>
+    <div>
+      <label>{{element.type}} Suffix:</label>
+      <input [(ngModel)]="element.suffix">
+    </div>
+    <div>
+      <label>{{element.type}} length:</label>
+      <input [(ngModel)]="element.length">
+    </div>
+  </div>
+}
+</div>
+
+<div class="counter">
+  <label>Start Number:</label>
+  <input [(ngModel)]="counter">
+</div>
+<button (click)="submit()">Submit</button>
+
+<div *ngIf="response">
+  <h3>Id given to the numbering generator : {{ response | json }}</h3>
+</div>
+
+<app-user-form></app-user-form>

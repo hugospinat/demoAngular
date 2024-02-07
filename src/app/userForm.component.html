@@ -1,0 +1,25 @@
+<!-- userForm.component.html -->
+<form [formGroup]="userForm">
+  <div>
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+  </div>
+  <div>
+    <label>First Name:</label>
+    <input type="text" formControlName="firstName">
+  </div>
+  <div>
+    <label>Birth Date:</label>
+    <input type="date" formControlName="birthDate">
+  </div>
+  <div>
+    <label>Numbering id generetor:</label>
+    <select formControlName="numberingId">
+        <option *ngFor="let number of numbers" [value]="number">{{number}}</option>
+    </select>
+</div>
+</form>
+<button (click)="submitForm()" [disabled]="userForm.invalid">Submit</button>
+<div *ngIf="response">
+  <h3>Response: {{ response | json }}</h3>
+</div>
