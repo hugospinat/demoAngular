@@ -1,27 +1,37 @@
 # DemoAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Le but du projet est de créer un front end pour l'api du Numbering Generator Service.
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Explication](#Explicattion)
+- [Amelioration](#Amelioration)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+Il est nécessaire d'avoir installer node afin d'avoir npm, puis d'installer la ligne de commande Angular (npm install -g @angular/cli).
+Lancer en entrant la commande "ng serve" à la racine.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
+Une fois le serveur lancé, installer https://github.com/hugospinat/demoSpringBoot pour le backend.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Explication du code
 
-## Further help
+Le code est structure de maniere assez simple, il y a trois composants disposant chacun d'un ficher css, html, et typescript :
+- le composant app qui ne contient uniquement le titre et est le le composant bootstraper.
+- le composant userForm qui genere un form pour generer un numero à partir des données utilisateur.
+- le composant numbering qui permet la génération d'un Numbering Service, il possede aussi userForm comme composant enfant afin de pouvoir utiliser celui-ci aussi tot.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Amelioration
+
+Je pourrais simplifier l'organisation du code en utilisant un unique composant standalone à voir.
+Un meilleur css / unifié celui-ci ?
+Commenter le code ?
+Visualisation des Generateurs existant / modification de ces derniers.
